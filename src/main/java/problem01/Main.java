@@ -39,6 +39,19 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		
+		if(0<answer&&101<answer) {
+			System.out.println("0~100까지의 값을 입력해주세요.");
+		}else if(answer>randomNumber) {
+			max = answer;
+			count++;
+		}else if(answer<randomNumber) {
+			min = answer;
+			count++;
+		}else if(answer==randomNumber) {
+			count++;
+			return true;
+		}
+		return false;
 	}
 }
